@@ -16,6 +16,27 @@ light_blue = "#F7D507"
 light_gray = "#FFFFFF"
 label_color = "#000000"
 
+class GUI_Calculator:
+    def __init__(self):
+        self.window = tk.Tk
+        self.window.geometry("500x300")
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 from back_end import Calculator
