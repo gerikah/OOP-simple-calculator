@@ -36,7 +36,7 @@ class Calculator:
                 self.number_1 = float(input())
                 print("Enter the second number: ")
                 self.number_2 = float(input())
-                if self.number_1 and self.number_2 is not float:
+                if not isinstance(self.number_1, float) or not isinstance(self.number_2, float):
                     raise ValueError
                 break
             except ValueError:
