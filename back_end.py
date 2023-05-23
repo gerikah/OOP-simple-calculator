@@ -45,5 +45,7 @@ class Calculator:
                 self.result = self.number_1 * self.number_2
             else:
                 self.result = self.number_1 / self.number_2            
-        except
+        except ZeroDivisionError:
+            print("Error. You cannot divide by zero.")
+            self.result = None
 
