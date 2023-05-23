@@ -37,6 +37,13 @@ class Calculator:
 
     def perform_calculation(self):
         try:
-            
+            if self.selected_operation == "+":
+                self.result = self.number_1 + self.number_2
+            elif self.selected_operation == "-":
+                self.result = self.number_1 - self.number_2
+            elif self.selected_operation == "*":
+                self.result = self.number_1 * self.number_2
+            else:
+                self.result = self.number_1 / self.number_2            
         except
 
