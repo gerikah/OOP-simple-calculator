@@ -9,12 +9,15 @@ class Calculator:
         self.result = None
 
     def run_Calculator(self):
-    
-        self.get_operation()
-        self.get_numbers()
-        self.perform_calculation()
-        self.display_result()
-    
+        while True:
+            self.get_operation()
+            self.get_numbers()
+            self.perform_calculation()
+            self.display_result()
+            if not self.try_again()
+                print("Thank you for using this calculator")
+                break
+
     def get_operation(self):
         while True:
             try:
