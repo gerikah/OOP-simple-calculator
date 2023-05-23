@@ -3,3 +3,4 @@
 class Calculator:
     def __init__(self):
         self.mathematical_operations = ["+", "-", "*", "/"]
+        self.number_1 = None
