@@ -2,6 +2,8 @@
 
 from back_end import Calculator
 
-if __name__ == "__simple_calc__":
+if __name__ == "__main__":
     calculator = Calculator()
-    calculator.run_Calculator
+    calculator.run_Calculator()
+
+    

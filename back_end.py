@@ -14,7 +14,7 @@ class Calculator:
             self.get_numbers()
             self.perform_calculation()
             self.display_result()
-            if not self.try_again()
+            if not self.try_again():
                 print("Thank you for using this calculator")
                 break
 
@@ -35,7 +35,7 @@ class Calculator:
             self.number_1 = float(input())
             print("Enter the second number: ")
             self.number_2 = float(input())
-        except ValueError:
+        except ValueError and TypeError:
             print("Invalid input. Please try again")
 
     def perform_calculation(self):
@@ -54,7 +54,7 @@ class Calculator:
 
     def display_result(self):
         if self.result is not None:
-            print("The result of {} {} {} is {}".format(self.number_1, self.selected_operation, self.number_2))
+            print("The result of {} {} {} is {}".format(self.number_1, self.selected_operation, self.number_2, self.result))
 
     def try_again(self):
         while True:
