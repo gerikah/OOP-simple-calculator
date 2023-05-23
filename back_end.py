@@ -22,5 +22,6 @@ class Calculator:
                 self.selected_operation = input ().strip
                 if self.selected_operation not in self.mathematical_operations:
                     raise ValueError
+                break
             except ValueError:
                 print("Inavalid operation. Please try again.")
