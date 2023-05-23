@@ -27,8 +27,10 @@ class Calculator:
                 print("Inavalid operation. Please try again.")
 
     def get_numbers(self):
-        print("Enter the first number: ")
-        self.number_1 = float(input())
-        print("Enter the second number: ")
-        self.number_2 = float(input())
-        
+        try:
+            print("Enter the first number: ")
+            self.number_1 = float(input())
+            print("Enter the second number: ")
+            self.number_2 = float(input())
+        except ValueError:
+            print("Invalid input. Please try again")
