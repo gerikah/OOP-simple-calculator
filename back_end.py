@@ -19,7 +19,7 @@ class Calculator:
         while True:
             try:
                 print("Choose one mathematical operation: ")
-                self.selected_operation = input ().strip
+                self.selected_operation = input()
                 if self.selected_operation not in self.mathematical_operations:
                     raise ValueError
                 break
@@ -35,5 +35,8 @@ class Calculator:
         except ValueError:
             print("Invalid input. Please try again")
 
-calculator = Calculator()
-calculator.run_Calculator()
+    def perform_calculation(self):
+        try:
+            
+        except
+
