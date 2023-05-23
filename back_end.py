@@ -16,8 +16,11 @@ class Calculator:
         self.display_result()
     
     def get_operation(self):
-    try:
-        print("Choose one mathematical operation: ")
-        self.selected_operation = input ().strip
-    except ValueError:
-        print("Inavalid operation. Please try again.")
+        while True:
+            try:
+                print("Choose one mathematical operation: ")
+                self.selected_operation = input ().strip
+                if self.selected_operation not in self.mathematical_operations:
+                    raise ValueError
+            except ValueError:
+                print("Inavalid operation. Please try again.")
