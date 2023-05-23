@@ -25,3 +25,10 @@ class Calculator:
                 break
             except ValueError:
                 print("Inavalid operation. Please try again.")
+
+    def get_numbers(self):
+        print("Enter the first number: ")
+        self.number_1 = float(input())
+        print("Enter the second number: ")
+        self.number_2 = float(input())
+        
