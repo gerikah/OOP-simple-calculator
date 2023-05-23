@@ -49,3 +49,7 @@ class Calculator:
             print("Error. You cannot divide by zero.")
             self.result = None
 
+    def display_result(self):
+        if self.result is not None:
+            print("The result of {} {} {} is {}".format(self.number_1, self.selected_operation, self.number_2))
+
