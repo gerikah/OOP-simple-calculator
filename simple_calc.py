@@ -20,6 +20,8 @@ class GUI_Calculator:
     def __init__(self):
         self.window = tk.Tk
         self.window.geometry("500x300")
+        self.window.resizable(0, 0)
+        self.window.title("simple calculator")
         
 
 
@@ -39,7 +41,7 @@ class GUI_Calculator:
 
 
 
-from back_end import Calculator
+from backend import Calculator
 
 if __name__ == "__main__":
     calculator = Calculator()
