@@ -34,3 +34,6 @@ class Calculator:
             self.number_2 = float(input())
         except ValueError:
             print("Invalid input. Please try again")
+
+calculator = Calculator()
+calculator.run_Calculator()
