@@ -22,6 +22,10 @@ class GUI_Calculator:
         self.window.geometry("500x300")
         self.window.resizable(0, 0)
         self.window.title("simple calculator")
+
+        # display frame and labels
+        self.display_frame = self.create_display_frame()
+        self.total_label, self.label = self.create_display_labels()
         
 
 
