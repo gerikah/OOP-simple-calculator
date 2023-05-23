@@ -6,3 +6,4 @@ class Calculator:
         self.number_1 = None
         self.number_2 = None
         self.selected_operation = None
+        self.result = None
