@@ -35,8 +35,8 @@ class GUI_Calculator:
         self.num2_entry.pack()
 
         # button to calculate
-        calculate_button = tk.Button(self.root, text = "Calculate", command = self.calculate)
-        calculate_button.pack()
+        calculate_button = tk.Button(self.root, text = "Calculate", command = self.calculate, font=("Poppins", 15, "bold"), width=10)
+        calculate_button.pack(side = tk.TOP, padx = 10, pady = 10)
 
         # displaying result label
         self.result_label = tk.Label(self.root)
