@@ -6,6 +6,7 @@ from backend import Calculator
 
 class GUI_Calculator:
     def __init__(self):
+        self.calculator = Calculator()
         self.root = tk.Tk()
         self.root.title("Simple Calculator")
         self.create_widgets()
@@ -46,18 +47,12 @@ class GUI_Calculator:
         except ZeroDivisionError as error:
             messagebox.showerror("Error, You cannot divide by zero", str(error))
 
-
-
-
-
-    
-
-
-
-
+    def display_result(self, result):
+        self.result_label.config(text = "The result is {}".format(result))
 
 if __name__ == "__main__":
-    calculator = Calculator()
-    calculator.run_Calculator()
+    calculator_gui = GUI_Calculator()
+    calculator_gui.run_calculator()
+
 
     

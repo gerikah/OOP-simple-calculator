@@ -10,10 +10,6 @@ class Calculator:
     
     def perform_calculation(self):
         try:
-            self.selected_operation = self.operation_Variable.get()
-            self.number_1 = float(self.num1_entry.get())
-            self.number_2 = float(self.num2_entry.get())
-            
             if self.selected_operation == "+":
                 self.result = self.number_1 + self.number_2
             elif self.selected_operation == "-":
@@ -23,10 +19,11 @@ class Calculator:
             else:
                 self.result = self.number_1 / self.number_2            
         except ZeroDivisionError:
-            print("Error. You cannot divide by zero.")
             self.result = None
+            raise ZeroDivisionError("Error. You cannot divide by zero.")
+            
         except ValueError:
-            print("Inavalid input. Please enter valid number.")
+            raise ValueError("Inavalid input. Please enter valid number.")
 
     def get_result(self):
         return self.result
