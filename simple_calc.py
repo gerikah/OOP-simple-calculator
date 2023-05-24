@@ -8,8 +8,8 @@ class GUI_Calculator:
     def __init__(self, Calculator):
         self.calculator = Calculator()
         self.root = tk.Tk()
-    #    self.root.geometry("500x300")
-    #    self.root.resizable(0, 0)
+        self.root.geometry("500x300")
+        self.root.resizable(0, 0)
         self.root.title("Simple Calculator")
         self.create_widgets()
 
@@ -40,7 +40,7 @@ class GUI_Calculator:
 
         # button to calculate
         calculate_button = tk.Button(self.root, text = "Calculate", command = self.calculate, font=("Poppins", 15, "bold"), width=10)
-        calculate_button.pack(side = tk.BOTTOM, padx = 20, pady = 50, anchor = tk.CENTER)
+        calculate_button.place(relx=0.5, rely=1.0, anchor="s")
 
         # displaying result label
         self.result_label = tk.Label(self.root)
