@@ -5,9 +5,11 @@ from tkinter import messagebox
 from backend import Calculator
 
 class GUI_Calculator:
-    def __init__(self):
+    def __init__(self, Calculator):
         self.calculator = Calculator()
         self.root = tk.Tk()
+        self.root.geometry("500x300")
+        self.root.resizable(0, 0)
         self.root.title("Simple Calculator")
         self.create_widgets()
 
@@ -60,7 +62,7 @@ class GUI_Calculator:
         self.result_label.config(text = "The result is {}".format(result))
 
 if __name__ == "__main__":
-    calculator_gui = GUI_Calculator()
+    calculator_gui = GUI_Calculator(Calculator)
     calculator_gui.run_calculator()
 
 
