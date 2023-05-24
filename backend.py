@@ -2,7 +2,9 @@
 
 class Calculator:
     def __init__(self):
+        # list of valid mathematical operations
         self.mathematical_operations = ["+", "-", "*", "/"]
+        # setting variables to None
         self.number_1 = None
         self.number_2 = None
         self.selected_operation = None
@@ -10,13 +12,17 @@ class Calculator:
     
     def perform_calculation(self):
         try:
-            if self.selected_operation == "+":
+            if self.selected_operation == "+": 
+                # addition operation
                 self.result = self.number_1 + self.number_2
-            elif self.selected_operation == "-":
+            elif self.selected_operation == "-": 
+                # subtraction operation
                 self.result = self.number_1 - self.number_2
-            elif self.selected_operation == "*":
+            elif self.selected_operation == "*": 
+                # multiplication operation
                 self.result = self.number_1 * self.number_2
-            else:
+            else: 
+                # division operation
                 self.result = self.number_1 / self.number_2  
                 if self.number_2 == 0:
                     raise ZeroDivisionError
