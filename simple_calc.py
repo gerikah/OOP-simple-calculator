@@ -25,6 +25,12 @@ class GUI_Calculator:
         self.num2_entry = tk.Entry(self.root)
         self.num2_entry.pack()
 
+        # button to calculate
+        calculate_button = tk.Button(self.root, text = "Calculate", command = self.calculate)
+        calculate_button.pack()
+
+
+
 
 
     
