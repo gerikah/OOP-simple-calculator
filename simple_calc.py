@@ -19,14 +19,14 @@ class GUI_Calculator:
         operation_label.pack
 
         # buttons for each operations
-        add_button = tk.Button(self.root, text = "+", command = lambda: self.set_operation("+"), font = ("Poppins", 15, "bold"), width = 7)
+        add_button = tk.Button(self.root, text = "+", command = lambda: self.set_operation("+"), font = ("Poppins", 15, "bold"), width = 8)
         add_button.pack(side = tk.LEFT, padx = 10, pady = 10)
-        subtract_button = tk.Button(self.root, text = "-", command = lambda: self.set_operation("-"))
-        subtract_button.pack(side = tk.LEFT)
-        multiply_button = tk.Button(self.root, text = "x", command = lambda: self.set_operation("*"))
-        multiply_button.pack(side = tk.LEFT)
-        divide_button = tk.Button(self.root, text = "÷", command = lambda: self.set_operation("/"))
-        divide_button.pack(side = tk.LEFT)
+        subtract_button = tk.Button(self.root, text = "-", command = lambda: self.set_operation("-"), font = ("Poppins", 15, "bold"), width = 8)
+        subtract_button.pack(side = tk.LEFT, padx = 10, pady = 10)
+        multiply_button = tk.Button(self.root, text = "x", command = lambda: self.set_operation("*"), font = ("Poppins", 15, "bold"), width = 8)
+        multiply_button.pack(side = tk.LEFT, padx = 10, pady = 10)
+        divide_button = tk.Button(self.root, text = "÷", command = lambda: self.set_operation("/"), font = ("Poppins", 15, "bold"), width = 8)
+        divide_button.pack(side = tk.LEFT, padx = 10, pady = 10)
 
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
