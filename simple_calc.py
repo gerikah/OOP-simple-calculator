@@ -16,10 +16,10 @@ class GUI_Calculator:
         operation_label = tk.Label(self.root, text= "Choose one mathematical operation")
         operation_label.pack
 
-        # menu for operation selection
-        self.operation_variable = tk.StringVar(self.root)
-        self.operation_variable.set(self.calculator.mathematical_operations[0])
-        
+        # buttons for each operations
+        add_button = tk.Button(self.root, text = "+", command = lambda: self.set_operation("+"))
+        add_button.pack(side = tk.LEFT)
+
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
         self.num1_entry.pack()
