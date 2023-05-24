@@ -65,8 +65,9 @@ class GUI_Calculator:
         except ZeroDivisionError as error:
             messagebox.showerror("Error, You cannot divide by zero", str(error))
 
+    
     def display_result(self, result):
-        self.result_label.config(text="The result is {}".format(result))
+        self.result_label.config(text="The result is {}".format(result), font = ("Poppins", 12, "bold"), foreground="violet")
 
     def ask_try_again(self):
         answer = messagebox.askyesno("Try Again", "Do you want to perform another calculation?")
@@ -78,7 +79,7 @@ class GUI_Calculator:
             self.result_label.config(text="Thank you for using this calculator")
             self.num1_entry.config(state="disabled")
             self.num2_entry.config(state="disabled")
-            self.root.quit()
+            self.root.after(2000, self.root.quit)
 
 if __name__ == "__main__":
     calculator_gui = GUI_Calculator(Calculator)
