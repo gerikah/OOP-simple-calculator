@@ -1,4 +1,4 @@
-# back end file
+# backend file
 
 class Calculator:
     def __init__(self):
@@ -21,7 +21,6 @@ class Calculator:
     def get_operation(self):
         while True:
             try:
-                print("Choose one mathematical operation: ")
                 self.selected_operation = input()
                 if self.selected_operation not in self.mathematical_operations:
                     raise ValueError
@@ -44,6 +43,10 @@ class Calculator:
 
     def perform_calculation(self):
         try:
+            self.selected_operation = self.operation_Variable.get()
+            self.number_1 = float(self.num1_entry.get())
+            self.number_2 = float(self.num2_entry.get())
+            
             if self.selected_operation == "+":
                 self.result = self.number_1 + self.number_2
             elif self.selected_operation == "-":
