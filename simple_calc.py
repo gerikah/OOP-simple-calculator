@@ -32,7 +32,10 @@ class GUI_Calculator:
         # displaying result label
         self.result_label = tk.Label(self.root)
         self.result_label.pack()
-         
+
+    def run_calculator(self):
+        self.root.mainloop()
+        
 
 
 
