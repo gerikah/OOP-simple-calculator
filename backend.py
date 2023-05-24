@@ -58,6 +58,8 @@ class Calculator:
         except ZeroDivisionError:
             print("Error. You cannot divide by zero.")
             self.result = None
+        except ValueError:
+            print("Inavalid input. Please enter valid number.")
 
     def get_result(self):
         return self.result
