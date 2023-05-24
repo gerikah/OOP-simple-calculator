@@ -35,7 +35,16 @@ class GUI_Calculator:
 
     def run_calculator(self):
         self.root.mainloop()
-        
+
+    def calculate(self):
+        try:
+            self.calculator.perform_calculation()
+            result = self.calculator.get_result()
+            self.display_result(result)
+        except ValueError as error:
+            messagebox.showerror("Error, Invalid expression", str(error))
+        except ZeroDivisionError as error:
+            messagebox.showerror("Error, You cannot divide by zero", str(error))
 
 
 
