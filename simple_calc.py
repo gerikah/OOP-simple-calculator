@@ -18,7 +18,7 @@ class GUI_Calculator:
 
         # menu for operation selection
         self.operation_variable = tk.StringVar(self.root)
-        self.operation_variable.set(self.calculator.mathematical_opeartions[0])
+        self.operation_variable.set(self.calculator.mathematical_operations[0])
         
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
