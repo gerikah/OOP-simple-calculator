@@ -43,6 +43,9 @@ class GUI_Calculator:
     def run_calculator(self):
         self.root.mainloop()
 
+    def set_operation(self, operation):
+        self.calculator.selected_operation = operation
+
     def calculate(self):
         try:
             self.calculator.perform_calculation()
