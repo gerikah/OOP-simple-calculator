@@ -1,4 +1,4 @@
-## Calculator Program
+## Simple Calculator
 
 This program is a simple calculator that performs basic mathematical operations such as addition, subtraction, multiplication, and division. It has a graphical user interface (GUI) built using the Tkinter library.
 
