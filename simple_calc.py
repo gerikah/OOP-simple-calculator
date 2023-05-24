@@ -8,8 +8,8 @@ class GUI_Calculator:
     def __init__(self, Calculator):
         self.calculator = Calculator()
         self.root = tk.Tk()
-        self.root.geometry("500x300")
-        self.root.resizable(0, 0)
+    #    self.root.geometry("500x300")
+    #    self.root.resizable(0, 0)
         self.root.title("Simple Calculator")
         self.create_widgets()
 
@@ -18,6 +18,10 @@ class GUI_Calculator:
         operation_label = tk.Label(self.root, text= "Choose one mathematical operation")
         operation_label.pack
 
+        # button frame
+        button_frame = tk.Frame(self.root)
+        button_frame.pack(side=tk.TOP, padx=10, pady=10)
+        
         # buttons for each operations
         add_button = tk.Button(self.root, text = "+", command = lambda: self.set_operation("+"), font = ("Poppins", 15, "bold"), width = 8)
         add_button.pack(side = tk.LEFT, padx = 10, pady = 10)
@@ -30,13 +34,13 @@ class GUI_Calculator:
 
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
-        self.num1_entry.pack()
+        self.num1_entry.pack(side = tk.TOP, padx = 0, pady= 5)
         self.num2_entry = tk.Entry(self.root)
         self.num2_entry.pack()
 
         # button to calculate
         calculate_button = tk.Button(self.root, text = "Calculate", command = self.calculate, font=("Poppins", 15, "bold"), width=10)
-        calculate_button.pack(side = tk.TOP, padx = 10, pady = 10)
+        calculate_button.pack(side = tk.BOTTOM, padx = 20, pady = 50, anchor = tk.CENTER)
 
         # displaying result label
         self.result_label = tk.Label(self.root)
