@@ -18,17 +18,13 @@ class GUI_Calculator:
         operation_label.grid(row=0, columnspan=4, padx=10, pady=10)
 
         # buttons for each operation
-        add_button = tk.Button(self.root, text="+", command=lambda: self.set_operation("+"),
-                               font=("Poppins", 15, "bold"), width=8)
+        add_button = tk.Button(self.root, text="+", command=lambda: self.set_operation("+"), font=("Poppins", 15, "bold"), width=8)
         add_button.grid(row=1, column=0, padx=10, pady=10)
-        subtract_button = tk.Button(self.root, text="-", command=lambda: self.set_operation("-"),
-                                    font=("Poppins", 15, "bold"), width=8)
+        subtract_button = tk.Button(self.root, text="-", command=lambda: self.set_operation("-"), font=("Poppins", 15, "bold"), width=8)
         subtract_button.grid(row=1, column=1, padx=10, pady=10)
-        multiply_button = tk.Button(self.root, text="x", command=lambda: self.set_operation("*"),
-                                    font=("Poppins", 15, "bold"), width=8)
+        multiply_button = tk.Button(self.root, text="x", command=lambda: self.set_operation("*"), font=("Poppins", 15, "bold"), width=8)
         multiply_button.grid(row=1, column=2, padx=10, pady=10)
-        divide_button = tk.Button(self.root, text="÷", command=lambda: self.set_operation("/"),
-                                  font=("Poppins", 15, "bold"), width=8)
+        divide_button = tk.Button(self.root, text="÷", command=lambda: self.set_operation("/"), font=("Poppins", 15, "bold"), width=8)
         divide_button.grid(row=1, column=3, padx=10, pady=10)
 
         # entry fields for number 1 and number 2
@@ -38,8 +34,7 @@ class GUI_Calculator:
         self.num2_entry.grid(row=3, column=0, columnspan=4, padx=10, pady=10)
 
         # button to calculate
-        calculate_button = tk.Button(self.root, text="Calculate", command=self.calculate,
-                                     font=("Poppins", 15, "bold"), width=10)
+        calculate_button = tk.Button(self.root, text="Calculate", command=self.calculate, font=("Poppins", 15, "bold"), width=10)
         calculate_button.grid(row=4, columnspan=4, padx=10, pady=10)
 
         # displaying result label
@@ -54,6 +49,8 @@ class GUI_Calculator:
 
     def calculate(self):
         try:
+            self.calculator.number_1 = float(self.num1_entry.get())
+            self.calculator.number_2 = float(self.num2_entry.get())
             self.calculator.perform_calculation()
             result = self.calculator.get_result()
             self.display_result(result)
