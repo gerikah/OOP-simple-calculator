@@ -15,31 +15,32 @@ class GUI_Calculator:
     def create_widgets(self):
         # label for operation selection
         operation_label = tk.Label(self.root, text="Choose one mathematical operation", font=("Poppins", 12))
-        operation_label.grid(row=0, columnspan=4, padx=10, pady=10)
+        operation_label.grid(row=3, columnspan=4, padx=10, pady=10)
 
     # buttons for each operation
         # addition 
         add_button = tk.Button(self.root, text="+", command=lambda: self.set_operation("+"), font=("Poppins", 15, "bold"), width=8)
-        add_button.grid(row=1, column=0, padx=10, pady=10)
+        add_button.grid(row=4, column=0, padx=10, pady=10)
         # subtraction
         subtract_button = tk.Button(self.root, text="-", command=lambda: self.set_operation("-"), font=("Poppins", 15, "bold"), width=8)
-        subtract_button.grid(row=1, column=1, padx=10, pady=10)
+        subtract_button.grid(row=4, column=1, padx=10, pady=10)
         # multiplication
         multiply_button = tk.Button(self.root, text="x", command=lambda: self.set_operation("*"), font=("Poppins", 15, "bold"), width=8)
-        multiply_button.grid(row=1, column=2, padx=10, pady=10)
+        multiply_button.grid(row=4, column=2, padx=10, pady=10)
         # division
         divide_button = tk.Button(self.root, text="÷", command=lambda: self.set_operation("/"), font=("Poppins", 15, "bold"), width=8)
-        divide_button.grid(row=1, column=3, padx=10, pady=10)
+        divide_button.grid(row=4, column=3, padx=10, pady=10)
 
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
-        self.num1_entry.grid(row=2, column=0, columnspan=4, padx=10, pady=10)
+        self.num1_entry.grid(row=1, column=0, columnspan=4, padx=10, pady=10)
+
         self.num2_entry = tk.Entry(self.root)
-        self.num2_entry.grid(row=3, column=0, columnspan=4, padx=10, pady=10)
+        self.num2_entry.grid(row=2, column=0, columnspan=4, padx=10, pady=10)
 
         # button to calculate
         calculate_button = tk.Button(self.root, text="Calculate", command=self.calculate, font=("Poppins", 15, "bold"), width=10)
-        calculate_button.grid(row=4, columnspan=4, padx=10, pady=10)
+        calculate_button.grid(row=6, columnspan=4, padx=10, pady=10)
 
         # displaying result label
         self.result_label = tk.Label(self.root)
@@ -78,7 +79,6 @@ class GUI_Calculator:
             self.num1_entry.config(state="disabled")
             self.num2_entry.config(state="disabled")
             self.root.quit()
-
 
 if __name__ == "__main__":
     calculator_gui = GUI_Calculator(Calculator)
