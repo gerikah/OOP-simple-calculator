@@ -59,19 +59,7 @@ class Calculator:
             print("Error. You cannot divide by zero.")
             self.result = None
 
-    def display_result(self):
-        if self.result is not None:
-            print("The result of {} {} {} is {}".format(self.number_1, self.selected_operation, self.number_2, self.result))
-
-    def try_again(self):
-        while True:
-            try:
-                print("Do you want to try again? (yes/no): ")
-                answer = input().lower()
-                if answer not in ["yes", "no"]:
-                    raise ValueError
-                break
-            except ValueError:
-                print("Inavalid input. Please enter 'yes' or 'no'.")
-        return answer == "yes"
+    def get_result(self):
+        return self.result
+    
     
