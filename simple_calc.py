@@ -19,8 +19,8 @@ class GUI_Calculator:
         operation_label.pack
 
         # buttons for each operations
-        add_button = tk.Button(self.root, text = "+", command = lambda: self.set_operation("+"))
-        add_button.pack(side = tk.LEFT)
+        add_button = tk.Button(self.root, text = "+", command = lambda: self.set_operation("+"), font = ("Poppins", 15, "bold"), width = 7)
+        add_button.pack(side = tk.LEFT, padx = 10, pady = 10)
         subtract_button = tk.Button(self.root, text = "-", command = lambda: self.set_operation("-"))
         subtract_button.pack(side = tk.LEFT)
         multiply_button = tk.Button(self.root, text = "x", command = lambda: self.set_operation("*"))
