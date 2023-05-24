@@ -29,6 +29,11 @@ class GUI_Calculator:
         calculate_button = tk.Button(self.root, text = "Calculate", command = self.calculate)
         calculate_button.pack()
 
+        # displaying result label
+        self.result_label = tk.Label(self.root)
+        self.result_label.pack()
+         
+
 
 
 
