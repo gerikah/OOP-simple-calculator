@@ -17,7 +17,11 @@ class Calculator:
             elif self.selected_operation == "*":
                 self.result = self.number_1 * self.number_2
             else:
-                self.result = self.number_1 / self.number_2            
+                self.result = self.number_1 / self.number_2  
+                if self.number_2 == 0:
+                    raise ZeroDivisionError
+                self.result = self.number_1/self.number_2
+                       
         except ZeroDivisionError:
             self.result = None
             raise ZeroDivisionError("Error. You cannot divide by zero.")
