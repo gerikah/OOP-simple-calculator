@@ -19,6 +19,12 @@ class GUI_Calculator:
         # buttons for each operations
         add_button = tk.Button(self.root, text = "+", command = lambda: self.set_operation("+"))
         add_button.pack(side = tk.LEFT)
+        subtract_button = tk.Button(self.root, text = "-", command = lambda: self.set_operation("-"))
+        subtract_button.pack(side = tk.LEFT)
+        multiply_button = tk.Button(self.root, text = "x", command = lambda: self.set_operation("*"))
+        multiply_button.pack(side = tk.LEFT)
+        divide_button = tk.Button(self.root, text = "÷", command = lambda: self.set_operation("/"))
+        divide_button.pack(side = tk.LEFT)
 
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
