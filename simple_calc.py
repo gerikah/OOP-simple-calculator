@@ -14,16 +14,20 @@ class GUI_Calculator:
 
     def create_widgets(self):
         # label for operation selection
-        operation_label = tk.Label(self.root, text="Choose one mathematical operation")
+        operation_label = tk.Label(self.root, text="Choose one mathematical operation", font=("Poppins", 12))
         operation_label.grid(row=0, columnspan=4, padx=10, pady=10)
 
-        # buttons for each operation
+    # buttons for each operation
+        # addition 
         add_button = tk.Button(self.root, text="+", command=lambda: self.set_operation("+"), font=("Poppins", 15, "bold"), width=8)
         add_button.grid(row=1, column=0, padx=10, pady=10)
+        # subtraction
         subtract_button = tk.Button(self.root, text="-", command=lambda: self.set_operation("-"), font=("Poppins", 15, "bold"), width=8)
         subtract_button.grid(row=1, column=1, padx=10, pady=10)
+        # multiplication
         multiply_button = tk.Button(self.root, text="x", command=lambda: self.set_operation("*"), font=("Poppins", 15, "bold"), width=8)
         multiply_button.grid(row=1, column=2, padx=10, pady=10)
+        # division
         divide_button = tk.Button(self.root, text="÷", command=lambda: self.set_operation("/"), font=("Poppins", 15, "bold"), width=8)
         divide_button.grid(row=1, column=3, padx=10, pady=10)
 
@@ -54,6 +58,7 @@ class GUI_Calculator:
             self.calculator.perform_calculation()
             result = self.calculator.get_result()
             self.display_result(result)
+            self.ask_try_again()
         except ValueError as error:
             messagebox.showerror("Error, Invalid expression", str(error))
         except ZeroDivisionError as error:
@@ -61,6 +66,19 @@ class GUI_Calculator:
 
     def display_result(self, result):
         self.result_label.config(text="The result is {}".format(result))
+
+    def ask_try_again(self):
+        answer = messagebox.askyesno("Try Again", "Do you want to perform another calculation?")
+        if answer:
+            self.num1_entry.delete(0, tk.END)
+            self.num2_entry.delete(0, tk.END)
+            self.result_label.config(text="")
+        else:
+            self.result_label.config(text="Thank you for using this calculator")
+            self.num1_entry.config(state="disabled")
+            self.num2_entry.config(state="disabled")
+            self.root.quit()
+
 
 if __name__ == "__main__":
     calculator_gui = GUI_Calculator(Calculator)
