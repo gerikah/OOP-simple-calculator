@@ -1,4 +1,4 @@
-# backend file
+# backend file of the program
 
 class Calculator:
     def __init__(self):
