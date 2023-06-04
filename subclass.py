@@ -10,3 +10,6 @@ class Advanced_Calculator(Calculator):
         self.selected_operation = "**"
         self.perform_calculation()
         return self.result
+    
+    def remainder(self, dividend, divisor):
+        
