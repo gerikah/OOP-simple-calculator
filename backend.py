@@ -21,13 +21,18 @@ class Calculator:
             elif self.selected_operation == "*": 
                 # multiplication operation
                 self.result = self.number_1 * self.number_2
-            else: 
+            elif self.selected_operation == "/": 
                 # division operation
                 self.result = self.number_1 / self.number_2  
                 if self.number_2 == 0:
                     raise ZeroDivisionError
                 self.result = self.number_1/self.number_2
-                       
+            elif self.selected_operation == "**":
+                self.result = self.number_1 ** self.number_2
+            else: 
+                self.selected_operation == "%"
+                self.result = self.number_1 % self.number_2
+       
         except ZeroDivisionError:
             self.result = None
             raise ZeroDivisionError("Error. You cannot divide by zero.")
@@ -37,5 +42,3 @@ class Calculator:
 
     def get_result(self):
         return self.result
-    
-    
