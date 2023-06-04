@@ -12,4 +12,8 @@ class Advanced_Calculator(Calculator):
         return self.result
     
     def remainder(self, dividend, divisor):
-        
+        self.number_1 = dividend
+        self.number_2 = divisor
+        self.selected_operation = "%"
+        self.perform_calculation()
+        return self.result
