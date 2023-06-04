@@ -38,6 +38,10 @@ class GUI_Calculator:
         divide_button = tk.Button(self.root, text="÷", command=lambda: self.set_operation("/"), font=("Poppins", 15, "bold"), width=8)
         divide_button.grid(row=4, column=3, padx=10, pady=10)
 
+        # exponent
+        exponent_button = tk.Button(self.root, text="^", command=lambda: self.set_operation("**"), font=("Poppins", 15, "bold"), width=8)
+        exponent_button.grid(row=5, column=0, padx=10, pady=10)
+
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
         self.num1_entry.grid(row=1, column=0, columnspan=4, padx=10, pady=10)
