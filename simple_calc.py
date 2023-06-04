@@ -13,7 +13,7 @@ class GUI_Calculator:
     def __init__(self, Calculator):
         self.calculator = Calculator()
         self.root = tk.Tk()
-        self.root.geometry("500x300")
+        self.root.geometry("470x300")
         self.root.resizable(0, 0)
         self.root.title("Simple Calculator")
         self.create_widgets()
@@ -26,21 +26,25 @@ class GUI_Calculator:
 
     # buttons for each operation
         # addition 
-        add_button = tk.Button(self.root, text="+", command=lambda: self.set_operation("+"), font=("Poppins", 15, "bold"), width=8)
+        add_button = tk.Button(self.root, text="+", command=lambda: self.set_operation("+"), font=("Poppins", 15, "bold"), width=4)
         add_button.grid(row=4, column=0, padx=10, pady=10)
         # subtraction
-        subtract_button = tk.Button(self.root, text="-", command=lambda: self.set_operation("-"), font=("Poppins", 15, "bold"), width=8)
+        subtract_button = tk.Button(self.root, text="-", command=lambda: self.set_operation("-"), font=("Poppins", 15, "bold"), width=4)
         subtract_button.grid(row=4, column=1, padx=10, pady=10)
         # multiplication
-        multiply_button = tk.Button(self.root, text="x", command=lambda: self.set_operation("*"), font=("Poppins", 15, "bold"), width=8)
+        multiply_button = tk.Button(self.root, text="x", command=lambda: self.set_operation("*"), font=("Poppins", 15, "bold"), width=4)
         multiply_button.grid(row=4, column=2, padx=10, pady=10)
         # division
-        divide_button = tk.Button(self.root, text="÷", command=lambda: self.set_operation("/"), font=("Poppins", 15, "bold"), width=8)
+        divide_button = tk.Button(self.root, text="÷", command=lambda: self.set_operation("/"), font=("Poppins", 15, "bold"), width=4)
         divide_button.grid(row=4, column=3, padx=10, pady=10)
 
         # exponent
-        exponent_button = tk.Button(self.root, text="^", command=lambda: self.set_operation("**"), font=("Poppins", 15, "bold"), width=8)
-        exponent_button.grid(row=5, column=0, padx=10, pady=10)
+        exponent_button = tk.Button(self.root, text="^", command=lambda: self.set_operation("**"), font=("Poppins", 15, "bold"), width=4)
+        exponent_button.grid(row=4, column=4, padx=10, pady=10)
+
+        # remainder
+        remainder_button = tk.Button(self.root, text="%", command=lambda: self.set_operation("%"), font=("Poppins", 15, "bold"), width=4)
+        remainder_button.grid(row=4, column=5, padx=10, pady=10)
 
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
