@@ -22,7 +22,7 @@ class GUI_Calculator:
     def create_widgets(self):
         # label for operation selection
         operation_label = tk.Label(self.root, text="Choose one mathematical operation", font=("Poppins", 12))
-        operation_label.grid(row=3, columnspan=4, padx=10, pady=10)
+        operation_label.grid(row=3, columnspan=7, padx=10, pady=10)
 
     # buttons for each operation
         # addition 
@@ -48,18 +48,18 @@ class GUI_Calculator:
 
         # entry fields for number 1 and number 2
         self.num1_entry = tk.Entry(self.root)
-        self.num1_entry.grid(row=1, column=0, columnspan=4, padx=10, pady=10)
+        self.num1_entry.grid(row=1, column=0, columnspan=7, padx=10, pady=10)
 
         self.num2_entry = tk.Entry(self.root)
-        self.num2_entry.grid(row=2, column=0, columnspan=4, padx=10, pady=10)
+        self.num2_entry.grid(row=2, column=0, columnspan=7, padx=10, pady=10)
 
         # button to calculate
         calculate_button = tk.Button(self.root, text="Calculate", command=self.calculate, font=("Poppins", 15, "bold"), width=10)
-        calculate_button.grid(row=6, columnspan=4, padx=10, pady=10)
+        calculate_button.grid(row=6, columnspan=7, padx=10, pady=10)
 
         # displaying result label
         self.result_label = tk.Label(self.root)
-        self.result_label.grid(row=5, columnspan=4, padx=10, pady=10)
+        self.result_label.grid(row=5, columnspan=7, padx=10, pady=10)
 
     
     def run_calculator(self):
